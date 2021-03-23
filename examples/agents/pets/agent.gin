@@ -1,0 +1,30 @@
+
+import gin.tf.external_configurables
+import bellman.environments.transition_model.keras_model.transition_model_types
+import bellman.environments.transition_model.keras_model.trajectory_sampler_types
+import bellman.trajectory_optimisers.trajectory_optimization_types
+
+
+train_eval.random_seed = 0
+train_eval.transition_model_type = %TransitionModelType.DeterministicEnsemble
+train_eval.num_hidden_layers = 0
+train_eval.num_hidden_nodes = 100
+train_eval.activation_function = @tf.nn.relu
+train_eval.ensemble_size = 5
+train_eval.predict_state_difference = True
+train_eval.epochs = 100
+train_eval.training_batch_size = 32
+train_eval.trajectory_sampler_type = %TrajectorySamplerType.TS1
+train_eval.trajectory_optimization_type = %TrajectoryOptimizationType.RandomShooting
+train_eval.horizon = 25
+train_eval.population_size = 400
+train_eval.number_of_particles = 20
+train_eval.num_elites = 40
+train_eval.learning_rate = 0.9
+train_eval.max_iterations = 5
+
+train_eval.steps_per_transition_model_update = 200
+
+train_eval.replay_buffer_capacity = 10001
+train_eval.number_of_initial_random_policy_steps = 200
+train_eval.use_tf_function = False
