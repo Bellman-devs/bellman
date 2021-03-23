@@ -1,0 +1,22 @@
+on:
+  # Trigger the workflow on push or pull request,
+  # but only for the develop branch
+  push:
+    branches:
+      - develop
+  pull_request:
+
+jobs:
+  check-and-test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+      with:
+        python-version: 3.7
+    - name: Install package
+      run: |
+        pip install poetry
+        poetry install
+    - name: Run tests and static analysis checks
+      run: poetry run task test

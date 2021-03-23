@@ -1,0 +1,17 @@
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+      with:
+        python-version: 3.7
+    - run: |
+        pip install poetry
+        poetry install
+        poetry run task slow_tests
