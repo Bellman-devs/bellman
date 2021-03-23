@@ -1,0 +1,24 @@
+
+
+
+train_eval.random_seed = 0
+train_eval.num_hidden_layers_agent = 2
+train_eval.num_hidden_nodes_agent = 32
+train_eval.discount_factor = 0.99
+train_eval.lambda_value = 0.5
+train_eval.max_kl = 0.01
+train_eval.backtrack_coefficient = 0.8
+train_eval.backtrack_iters = 10
+train_eval.cg_iters = 10
+train_eval.reward_normalizer = None
+train_eval.reward_norm_clipping = 10.0
+train_eval.log_prob_clipping = None
+train_eval.value_train_iters = 80
+train_eval.value_optimizer = None
+train_eval.gradient_clipping = None
+train_eval.debug = False
+
+train_eval.steps_per_policy_update = 100
+
+train_eval.replay_buffer_capacity = 1001
+train_eval.use_tf_function = True

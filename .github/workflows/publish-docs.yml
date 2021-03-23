@@ -1,0 +1,21 @@
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+      with:
+        python-version: 3.7
+    - run: |
+        TMPDIR=$(mktemp)
+        wget -O $TMPDIR https://github.com/jgm/pandoc/releases/download/2.10.1/pandoc-2.10.1-1-amd64.deb
+        sudo dpkg -i $TMPDIR
+        pip install poetry
+        poetry install
+        pip install -r docs/docs_requirements.txt
+        poetry run task docsgen
