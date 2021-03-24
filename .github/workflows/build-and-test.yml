@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - develop
+      - hstojic/codecov
   pull_request:
 
 jobs:
