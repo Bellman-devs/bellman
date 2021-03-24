@@ -39,11 +39,7 @@ Bellman uses [TensorFlow 2.4+](http://www.tensorflow.org) for running computatio
 
 #### For users
 
-You can use `pip` to install the toolbox. For the latest release from PyPi simply run
-```bash
-$ pip install bellman
-```
-or to install from latest source from GitHub, check-out the `develop` branch of the [Bellman GitHub repository](https://github.com/Bellman-devs/bellman), and run (in editable mode)
+You can use `pip` to install the toolbox from latest source from GitHub Check-out the `develop` branch of the [Bellman GitHub repository](https://github.com/Bellman-devs/bellman), and run (in editable mode)
 ```bash
 $ pip install -e .
 ```
