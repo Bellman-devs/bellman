@@ -20,3 +20,10 @@ jobs:
         poetry install
     - name: Run tests and static analysis checks
       run: poetry run task test
+    - name: "Upload coverage to Codecov"
+      uses: codecov/codecov-action@v1
+      with:
+        files: ./coverage1.xml,./coverage2.xml
+        name: codecov-umbrella
+        fail_ci_if_error: true
+        verbose: true
