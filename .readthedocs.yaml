@@ -1,0 +1,19 @@
+# Required
+version: 2
+
+# Build documentation in the doc/ directory with Sphinx
+sphinx:
+  configuration: docs/conf.py
+
+formats: []
+
+python:
+  version: 3.7
+  install:
+    - requirements: docs/docs_requirements.txt
+    - requirements: requirements.txt
+
+sphinx:
+  builder: html
+  configuration: conf.py
+  fail_on_warning: true
