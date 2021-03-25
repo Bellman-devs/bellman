@@ -18,7 +18,7 @@ from setuptools import find_packages, setup
 package_data = {"": ["*"]}
 
 install_requires = [
-    "numpy=1.19.2",
+    "numpy==1.19.2",
     "gym==0.17.2",
     "h5py==2.10.0",
     "imageio-ffmpeg==0.4.2",
