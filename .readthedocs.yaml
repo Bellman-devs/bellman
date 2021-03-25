@@ -11,8 +11,9 @@ python:
   version: 3.7
   install:
     - requirements: docs/docs_requirements.txt
-    - method: setuptools
-      path: .
+    - requirements: requirements.txt
+    # - method: setuptools
+    #   path: .
 
 sphinx:
   builder: html
