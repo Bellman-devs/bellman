@@ -1,0 +1,16 @@
+[run]
+source=bellman
+
+[report]
+omit = *tests*, setup.py
+exclude_lines =
+    raise AssertionError
+    raise NotImplementedError
+    if __name__ == .__main__.:
+    print
+
+[html]
+directory = cover_html
+
+[xml]
+output = coverage.xml

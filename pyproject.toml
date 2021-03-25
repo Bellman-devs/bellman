@@ -68,7 +68,7 @@ mujoco-py = ["mujoco-py"]
 lint = "pytest --pylint --cache-clear -m pylint -v && pytest --pylint --cache-clear -m pylint --pylint-rcfile=extrapylint bellman"
 mypy = "pytest --mypy --cache-clear -m mypy -v"
 quicktest = "pytest -x --ff -rN -Wignore"
-test = "pytest --pylint --mypy --black --isort --cache-clear -ra -v --cov bellman --cov-report term --cov-report html:cover_html --junitxml=reports/junit.xml -o junit_family=xunit2 && pytest --pylint --cache-clear -m pylint --pylint-rcfile=extrapylint bellman"
+test = "pytest --pylint --mypy --black --isort --cache-clear -ra -v --cov bellman --cov-report term --cov-report xml --cov-report html:cover_html --junitxml=reports/junit.xml -o junit_family=xunit2 && pytest --pylint --cache-clear -m pylint --pylint-rcfile=extrapylint bellman"
 slow_tests = "pytest --runslow"
 black = "black ."
 isort = "isort --atomic -y"
