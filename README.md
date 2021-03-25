@@ -1,10 +1,11 @@
 # Bellman
 
-<!-- [![Build & Test](https://github.com/Bellman-devs/bellman/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/Bellman-devs/bellman/actions/workflows/build-and-test.yml)
-[![Docs](https://github.com/Bellman-devs/bellman/actions/workflows/publish-docs.yml/badge.svg)](https://github.com/Bellman-devs/bellman/actions/workflows/publish-docs.yml)
-[![Coverage Status](http://codecov.io/github/Bellman-devs/bellman/coverage.svg?branch=master)](http://codecov.io/github/Bellman-devs/bellman?branch=master)
-[![Documentation Status](https://readthedocs.org/projects/bellman/badge/?version=master)](http://bellman.readthedocs.io/en/master/?badge=master)
- -->
+[![Quality checks](https://github.com/Bellman-devs/bellman/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/Bellman-devs/bellman/actions/workflows/build-and-test.yml)
+[![Slow tests](https://github.com/Bellman-devs/bellman/actions/workflows/slow-tests.yml/badge.svg)](https://github.com/Bellman-devs/bellman/actions/workflows/slow-tests.yml)
+[![Docs build](https://github.com/Bellman-devs/bellman/actions/workflows/publish-docs.yml/badge.svg)](https://github.com/Bellman-devs/bellman/actions/workflows/publish-docs.yml)
+[![Coverage Status](https://codecov.io/gh/Bellman-devs/bellman/branch/develop/graph/badge.svg?token=WAKSITJQWK)](https://codecov.io/gh/Bellman-devs/bellman)
+<!-- [![Documentation Status](https://readthedocs.org/projects/bellman/badge/?version=master)](http://bellman.readthedocs.io/en/master/?badge=master) -->
+
 
 <!-- [Website](https://bellman.dev) |
 [Documentation (release)](https://bellman.readthedocs.io/en/master/) |
