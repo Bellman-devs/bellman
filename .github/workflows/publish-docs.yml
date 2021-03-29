@@ -27,4 +27,4 @@ jobs:
           curl -X POST https://api.github.com/repos/Bellman-devs/Bellman-devs.github.io/dispatches \
           -H 'Accept: application/vnd.github.v3+json' \
           -u ${{ secrets.ACCESS_TOKEN }} \
-          --data '{"event_type": "PushOnDevelopBranch", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'", "tag": "0.1.0" }}'
+          --data '{"event_type": "PushOnDevelopBranch", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'", "tag": "'"$GITHUB_REF"'" }}'
