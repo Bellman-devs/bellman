@@ -1,4 +1,4 @@
-# Building Readthedocs
+# Building the documentation
 
 ## Compile documentation locally
 
@@ -28,3 +28,8 @@ To compile and view the documentation locally:
    
 
 If you want to create or edit a Jupyter Notebook for inclusion in this doc set, see `notebooks/README.md`.
+
+
+## Automatic builds for the Bellman website [(bellman.dev)](https://bellman.dev)
+
+A GitHub action `publish-docs.yml` triggers a GitHub action of the website repo [Bellman-devs.github.io](https://github.com/Bellman-devs/Bellman-devs.github.io) that actually compiles the documentation and commits it to a correct directory of the website. Latest version of the documentation can be found at [bellman.dev/docs/latest](https://bellman.dev/docs/latest). We didn't use a popular service like ReadTheDocs as their servers for compiling the documentation of open-source projects are too constrained for our needs. 

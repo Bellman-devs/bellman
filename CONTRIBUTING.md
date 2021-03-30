@@ -19,7 +19,7 @@ Instead of installing Bellman through `pip` you should install `poetry` and then
 
 ### Reporting a bug
 
-Finding and fixing bugs helps us provide robust functionality to all users. You can either submit a bug report or, if you know how to fix the bug yourself, you can submit a bug fix. We gladly welcome either, but a fix is likely to be released sooner, simply because others may not have time to quickly implement a fix themselves. If you're interested in implementing it, but would like help in doing so, leave a comment on the issue or create a discussion page.
+Finding and fixing bugs helps us provide robust functionality to all users. You can either submit a bug report or, if you know how to fix the bug yourself, you can submit a bug fix. We gladly welcome either, but a fix is likely to be released sooner, simply because others may not have time to quickly implement a fix themselves. If you're interested in implementing it, but would like help in doing so, leave a comment on the issue, create a discussion page or ask in the [community Slack workspace](https://bellmangroup.slack.com).
 
 We use GitHub issues for bug reports. You can use the [bug report template](.github/ISSUE_TEMPLATE/bug_report.md) to start writing yours. Once you've submitted it, the maintainers will take a look as soon as possible and get back to you about how to proceed. If it's a small easy fix, they may implement it then and there. For fixes that are more involved, they will discuss with you about how urgent the fix is, with the aim of providing some timeline of when you can expect to see it.
 
@@ -28,7 +28,7 @@ If you'd like to submit a bug fix, the [pull request templates](.github/PULL_REQ
 
 ### Requesting a feature
 
-Bellman is built on features added and improved by the community. You can submit a feature request either as an issue or, if you can implement the change yourself, as a pull request. We gladly welcome either, but a pull request is likely to be released sooner, simply because others may not have time to quickly implement it themselves. If you're interested in implementing it, but would like help in doing so, leave a comment on the issue or create a discussion page.
+Bellman is built on features added and improved by the community. You can submit a feature request either as an issue or, if you can implement the change yourself, as a pull request. We gladly welcome either, but a pull request is likely to be released sooner, simply because others may not have time to quickly implement it themselves. If you're interested in implementing it, but would like help in doing so, leave a comment on the issue, create a discussion page or ask in the [community Slack workspace](https://bellmangroup.slack.com).
 
 We use GitHub issues for feature requests. You can use the [feature request template](.github/ISSUE_TEMPLATE/feature_request.md) to start writing yours. Once you've submitted it, the maintainers will take a look as soon as possible and get back to you about how to proceed. If it's a small easy feature that is backwards compatible, they may implement it then and there. For features that are more involved, they will discuss with you about a timeline for implementing it. It may become apparent during discussions that a feature doesn't lie within the scope of Bellman, in which case we will discuss alternative options with you, such as adding it as a notebook or an external extension to Bellman.
 
@@ -61,7 +61,7 @@ For the API reference, we document Python code inline, using [reST markup](https
 
 #### Requesting a documentation change
 
-We welcome contributions for improving the documentation. You can submit a documentation change request either as an issue or, if you can implement the change yourself, as a pull request. We gladly welcome either, but a pull request is likely to be released sooner, simply because others may not have time to quickly implement it themselves. If you're interested in implementing it, but would like help in doing so, leave a comment on the issue or create a discussion page.
+We welcome contributions for improving the documentation. You can submit a documentation change request either as an issue or, if you can implement the change yourself, as a pull request. We gladly welcome either, but a pull request is likely to be released sooner, simply because others may not have time to quickly implement it themselves. If you're interested in implementing it, but would like help in doing so, leave a comment on the issue, create a discussion page or ask in the [community Slack workspace](https://bellmangroup.slack.com).
 
 We use GitHub issues for documentation change requests. You can use the [documentation issue template](.github/ISSUE_TEMPLATE/doc_issue.md) to start writing yours. Once you've submitted it, the maintainers will take a look as soon as possible and get back to you about how to proceed. If it's a small easy change, they may implement it then and there. For more substantial change, they will discuss with you about a timeline for implementing it. 
 
