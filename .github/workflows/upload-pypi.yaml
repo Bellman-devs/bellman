@@ -14,7 +14,8 @@
 
 on:
   push:
-    tags: v[0-9]+.[0-9]+.[0-9]+*
+    branches:
+      - main
 
 jobs:
   upload-pypi:
@@ -28,7 +29,7 @@ jobs:
         run: |
           VERSION="v$(cat VERSION | tr -d '\t\r\n ')"
           if [ "$VERSION" != "$GITHUB_REF" ]; then
-            echo "The package version ($VERSION) and the latest tag version ($CIRCLE_TAG) are different"
+            echo "The package version ($VERSION) and the latest tag version ($GITHUB_REF) are different"
             exit 1
           fi
       - name: Install twine
