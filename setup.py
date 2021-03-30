@@ -24,14 +24,15 @@ with open("VERSION", "r") as file:
 
 package_data = {"": ["*"]}
 
-install_requires = \
-['gym==0.17.2',
- 'imageio-ffmpeg==0.4.2',
- 'imageio==2.8.0',
- 'matplotlib==3.2.1',
- 'tensorflow-probability==0.12.1',
- 'tensorflow==2.4.0',
- 'tf-agents==0.7.1']
+install_requires = [
+    "gym==0.17.2",
+    "imageio-ffmpeg==0.4.2",
+    "imageio==2.8.0",
+    "matplotlib==3.2.1",
+    "tensorflow-probability==0.12.1",
+    "tensorflow==2.4.0",
+    "tf-agents==0.7.1",
+]
 
 extras_require = {"mujoco-py": ["mujoco-py>=2.0,<2.1"]}
 
