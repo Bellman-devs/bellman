@@ -1,19 +1,28 @@
 # Bellman
 
+[![Coverage Status](https://codecov.io/gh/Bellman-devs/bellman/branch/develop/graph/badge.svg?token=WAKSITJQWK)](https://codecov.io/gh/Bellman-devs/bellman)
 [![Quality checks](https://github.com/Bellman-devs/bellman/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/Bellman-devs/bellman/actions/workflows/build-and-test.yml)
 [![Slow tests](https://github.com/Bellman-devs/bellman/actions/workflows/slow-tests.yml/badge.svg)](https://github.com/Bellman-devs/bellman/actions/workflows/slow-tests.yml)
 [![Docs build](https://github.com/Bellman-devs/bellman/actions/workflows/publish-docs.yml/badge.svg)](https://github.com/Bellman-devs/bellman/actions/workflows/publish-docs.yml)
-[![Coverage Status](https://codecov.io/gh/Bellman-devs/bellman/branch/develop/graph/badge.svg?token=WAKSITJQWK)](https://codecov.io/gh/Bellman-devs/bellman)
-<!-- [![Documentation Status](https://readthedocs.org/projects/bellman/badge/?version=master)](http://bellman.readthedocs.io/en/master/?badge=master) -->
+[![Slack Status](https://img.shields.io/badge/slack-bellman-green.svg?logo=Slack)](https://join.slack.com/t/bellmangroup/shared_invite/zt-ohrzrok0-OlKRcG6hnMtzTXASCvchCg)
 
 
-<!-- [Website](https://bellman.dev) |
-[Documentation (release)](https://bellman.readthedocs.io/en/master/) |
-[Documentation (develop)](https://bellman.readthedocs.io/en/develop/) |
- -->
- 
+[Website](https://bellman.dev) |
+[Documentation (latest)](https://bellman.dev/docs/latest) |
+
+
+## What does Bellman do?
+
 Bellman is a package for model-based reinforcement learning (MBRL) in Python, using [TensorFlow](http://www.tensorflow.org) and building on top of model-free reinforcement learning package [TensorFlow Agents](https://www.tensorflow.org/agents/overview?hl=en&authuser=0).
-It was originally created by (in alphabetical order) 
+
+Bellman provides a framework for flexible composition of model-based reinforcement learning algorithms. It offers two major classes of algorithms: decision time planning and background planning algorithms. With each class any kind of supervised learning method can be easily used to learn certain component of the environment. Bellman was designed with modularity in mind - important components can be flexibly combined, such as type of decision time planning method (e.g. a cross entropy method or a random shooting method) and type of model for state transition (e.g. a probabilistic neural network or an ensemble of neural networks). Bellman also provides implementation of several popular state-of-the-art MBRL algorithms, such as PETS, MBPO and METRPO. The [online documentation (latest)](https://bellman.dev/docs/latest/) contains more details. 
+
+Bellman requires Python 3.7 onwards and uses [TensorFlow 2.4+](http://www.tensorflow.org) for running computations, which allows fast execution on GPUs.
+
+
+### Maintainers
+
+Bellman was originally created by (in alphabetical order) 
 [Vincent Adam](https://vincentadam87.github.io/), 
 [Jordi Grau-Moya](https://sites.google.com/view/graumoya), 
 [Felix Leibfried](https://github.com/fleibfried), 
@@ -21,6 +30,7 @@ It was originally created by (in alphabetical order)
 [Hrvoje Stojic](https://hstojic.re), and 
 [Peter Vrancx](https://github.com/pvrancx), 
 at [Secondmind Labs](https://www.secondmind.ai/labs/). 
+
 It is now actively maintained by (in alphabetical order)
 [Felix Leibfried](https://github.com/fleibfried),
 [John McLeod](https://github.com/johnamcleod),
@@ -28,12 +38,7 @@ and [Hrvoje Stojic](https://hstojic.re).
 
 Bellman is an open source project. If you have relevant skills and are interested in contributing then please do contact us (see ["The Bellman Community" section](#the-bellman-community) below).
 
-
-## What does Bellman do?
-
-Bellman provides a framework for flexible composition of model-based reinforcement learning algorithms. It offers two major classes of algorithms: decision time planning and background planning algorithms. With each class any kind of supervised learning method can be easily used to learn certain component of the environment. Bellman was designed with modularity in mind - important components can be flexibly combined, such as type of decision time planning method (e.g. a cross entropy method or a random shooting method) and type of model for state transition (e.g. a probabilistic neural network or an ensemble of neural networks). Bellman also provides implementation of several popular state-of-the-art MBRL algorithms, such as PETS, MBPO and METRPO. The [online documentation (develop)](http://bellman.readthedocs.io/en/develop/)/[(master)](http://bellman.readthedocs.io/en/master/) contains more details. 
-
-Bellman uses [TensorFlow 2.4+](http://www.tensorflow.org) for running computations, which allows fast execution on GPUs. Bellman requires Python 3.7 onwards.
+we are very grateful to our Secondmind Labs colleagues, maintainers of [GPflow](https://github.com/GPflow/GPflow) and [Trieste](https://github.com/secondmind-labs/trieste), for their help with creating contributing guidelines, instructions for users and open-sourcing in general.
 
 
 ## Install Bellman
@@ -81,6 +86,7 @@ poetry install -E mujoco-py
 If this command fails, please check troubleshooting sections at [`mujoco-py` github page](https://github.com/openai/mujoco-py), you might need to satisfy other `mujoco-py` dependencies (e.g. Linux system libraries) or set some environment variables.
 
 
+
 ## The Bellman Community
 
 ### Getting help
@@ -92,25 +98,31 @@ Please use [GitHub issues](https://github.com/Bellman-devs/bellman/issues/) to f
 Please use [Stack Overflow (Bellman tag)](https://stackoverflow.com/tags/Bellman) to ask questions that relate to "how to use Bellman", i.e. questions of understanding rather than issues that require changing Bellman code. (If you are unsure where to ask, you are always welcome to open a GitHub issue; we may then ask you to move your question to Stack Overflow.)
 
 
+### Slack workspace
+
+We have a public [Bellman slack workspace](https://bellmangroup.slack.com/). Please use this [invite link](https://join.slack.com/t/bellmangroup/shared_invite/zt-ohrzrok0-OlKRcG6hnMtzTXASCvchCg) if you'd like to join, whether to ask short informal questions or to be involved in the discussion and future development of Bellman.
+
+
 ### Contributing
 
 All constructive input is very much welcome. For detailed information, see the [guidelines for contributors](CONTRIBUTING.md).
 
-<!-- 
+
+
 ## Citing Bellman
 
-To cite Bellman, please reference our [arXiv paper](https://arxiv.org/abs/XXXX) where we review the framework and describe the design. Sample Bibtex is given below:
+To cite Bellman, please reference our [arXiv paper](https://arxiv.org/abs/2103.14407) where we review the framework and describe the design. Sample Bibtex is given below:
 
 ```
 @article{bellman2021,
-  author = {McLeod, John and Stojic, Hrvoje and Adam, Vincent and Kim, Dongho and Grau-Moya, Jordi and Vrancx, Peter and Leibfried, Felix},
-  title = {Bellman: A Framework for Model-based Reinforcement Learning},
-  year = {2021},
-  journal = {arXiv:XXXX},
-  url = {https://arxiv.org/abs/XXXX}
+    author = {McLeod, John and Stojic, Hrvoje and Adam, Vincent and Kim, Dongho and Grau-Moya, Jordi and Vrancx, Peter and Leibfried, Felix},
+    title = {Bellman: A Toolbox for Model-based Reinforcement Learning in TensorFlow},
+    year = {2021},
+    journal = {arXiv:2103.14407},
+    url = {https://arxiv.org/abs/2103.14407}
 }
 ```
- -->
+
 
 ## License
 
