@@ -27,18 +27,13 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.7"
-importlib_metadata = "^1.6"
 gym = "0.17.2"
 tensorflow = "2.4.0"
 tensorflow-probability = "0.12.1"
 tf-agents = "0.7.1"
-jupyter = "1.0.0"
-nbconvert = "5.6.1"
 matplotlib = "3.2.1"
 imageio = "2.8.0"
 imageio-ffmpeg = "0.4.2"
-simpy = "4.0.1"
-h5py = "2.10.0"
 mujoco-py = { version = "<2.1,>=2.0", optional = true }
 
 [tool.poetry.dev-dependencies]
@@ -53,13 +48,6 @@ taskipy = "^1.2.0"
 pytest-black = "^0.3.11"
 black = { version = "*", allow-prereleases = true }
 pytest-isort = "^1.0.0"
-sphinx = "^3.2.1"
-ipython = "^7.15.0"
-pandoc = "^1.0.2"
-nbsphinx = "^0.7.0"
-sphinx-rtd-theme = "^0.5.0"
-jupytext = "^1.5.1"
-sphinx-autodoc-typehints = "^1.11.0"
 
 [tool.poetry.extras]
 mujoco-py = ["mujoco-py"] 
