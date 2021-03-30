@@ -1,9 +1,11 @@
 # Bellman
 
+[![PyPI version](https://badge.fury.io/py/bellman.svg)](https://badge.fury.io/py/bellman)
 [![Coverage Status](https://codecov.io/gh/Bellman-devs/bellman/branch/develop/graph/badge.svg?token=WAKSITJQWK)](https://codecov.io/gh/Bellman-devs/bellman)
 [![Quality checks](https://github.com/Bellman-devs/bellman/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/Bellman-devs/bellman/actions/workflows/build-and-test.yml)
 [![Slow tests](https://github.com/Bellman-devs/bellman/actions/workflows/slow-tests.yml/badge.svg)](https://github.com/Bellman-devs/bellman/actions/workflows/slow-tests.yml)
 [![Docs build](https://github.com/Bellman-devs/bellman/actions/workflows/publish-docs.yml/badge.svg)](https://github.com/Bellman-devs/bellman/actions/workflows/publish-docs.yml)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Slack Status](https://img.shields.io/badge/slack-bellman-green.svg?logo=Slack)](https://join.slack.com/t/bellmangroup/shared_invite/zt-ohrzrok0-OlKRcG6hnMtzTXASCvchCg)
 
 
@@ -26,15 +28,16 @@ Bellman was originally created by (in alphabetical order)
 [Vincent Adam](https://vincentadam87.github.io/), 
 [Jordi Grau-Moya](https://sites.google.com/view/graumoya), 
 [Felix Leibfried](https://github.com/fleibfried), 
-[John McLeod](https://github.com/johnamcleod), 
+[John A. McLeod](https://github.com/johnamcleod), 
 [Hrvoje Stojic](https://hstojic.re), and 
 [Peter Vrancx](https://github.com/pvrancx), 
 at [Secondmind Labs](https://www.secondmind.ai/labs/). 
 
 It is now actively maintained by (in alphabetical order)
 [Felix Leibfried](https://github.com/fleibfried),
-[John McLeod](https://github.com/johnamcleod),
-and [Hrvoje Stojic](https://hstojic.re).
+[John A. McLeod](https://github.com/johnamcleod),
+[Hrvoje Stojic](https://hstojic.re),
+and [Peter Vrancx](https://github.com/pvrancx).
 
 Bellman is an open source project. If you have relevant skills and are interested in contributing then please do contact us (see ["The Bellman Community" section](#the-bellman-community) below).
 
@@ -45,11 +48,16 @@ we are very grateful to our Secondmind Labs colleagues, maintainers of [GPflow](
 
 #### For users
 
-You can use `pip` to install the toolbox from latest source from GitHub Check-out the `develop` branch of the [Bellman GitHub repository](https://github.com/Bellman-devs/bellman), and run (in editable mode)
+For latest (stable) release from [PyPI](https://pypi.org/) you can use `pip` to install the toolbox
+```bash
+$ pip install bellman
+```
+
+Use `pip` again to install the toolbox from latest source from GitHub. Check-out the `develop` branch of the [Bellman GitHub repository](https://github.com/Bellman-devs/bellman), and in the repository root run
 ```bash
 $ pip install -e .
 ```
-in the repository root.
+This will install the toolbox in editable mode.
 
 
 #### For contributors
