@@ -62,7 +62,7 @@ setup_kwargs = {
     "url": "https://bellman-dev",
     "project_urls": {
         "Source on GitHub": "https://github.com/Bellman-devs/bellman",
-        'Issue tracker': 'https://github.com/Bellman-devs/bellman/issues',
+        "Issue tracker": "https://github.com/Bellman-devs/bellman/issues",
         "Documentation": "https://bellman-dev/docs/latest",
     },
     "packages": find_packages(include=("bellman*",)),
