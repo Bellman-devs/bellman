@@ -12,8 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# pylint: skip-file
 
 from setuptools import find_packages, setup
+
+with open("README.md", "r") as file:
+    long_description = file.read()
+
+with open("VERSION", "r") as file:
+    version = file.read()
 
 package_data = {"": ["*"]}
 
@@ -36,14 +43,28 @@ extras_require = {"mujoco-py": ["mujoco-py>=2.0,<2.1"]}
 
 setup_kwargs = {
     "name": "bellman",
-    "version": "0.1.0",
-    "description": "Model Based Reinforcement Learning",
-    "long_description": None,
+    "version": version,
+    "description": "A Toolbox for Model-Based Reinforcement Learning in TensorFlow",
+    "long_description": long_description,
+    "long_description_content_type": "text/markdown",
+    "license": "Apache License 2.0",
     "author": "The Bellman Contributors",
     "author_email": "bellman-devs@protonmail.com",
-    "maintainer": None,
-    "maintainer_email": None,
-    "url": None,
+    "classifiers": [
+        "Programming Language :: Python :: 3.7",
+        "License :: OSI Approved :: Apache Software License",
+        "Operating System :: OS Independent",
+        "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    ],
+    "keywords": "machine-learning reinforcement-learning deep-learning tensorflow",
+    "maintainer": "The Bellman Maintainers",
+    "maintainer_email": "bellman-devs@protonmail.com",
+    "url": "https://bellman-dev",
+    "project_urls": {
+        "Source on GitHub": "https://github.com/Bellman-devs/bellman",
+        "Issue tracker": "https://github.com/Bellman-devs/bellman/issues",
+        "Documentation": "https://bellman-dev/docs/latest",
+    },
     "packages": find_packages(include=("bellman*",)),
     "package_data": package_data,
     "install_requires": install_requires,
