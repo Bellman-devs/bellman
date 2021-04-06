@@ -128,6 +128,7 @@ If you are making changes to the documentation or if you are introducing new fun
 
 To build the documentation run
 ```bash
+$ pip install -r ./docs/docs_requirements.txt
 $ poetry run task docsgen
 ```
 
