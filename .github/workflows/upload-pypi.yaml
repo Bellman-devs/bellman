@@ -27,8 +27,9 @@ jobs:
       - name: Verify git tag vs. VERSION
         run: |
           VERSION="v$(cat VERSION | tr -d '\t\r\n ')"
-          if [ "$VERSION" != "$GITHUB_REF" ]; then
-            echo "The package version ($VERSION) and the latest tag version ($GITHUB_REF) are different"
+          TAG="${GITHUB_REF/refs\/tags\//}"
+          if [ "$VERSION" != "$TAG" ]; then
+            echo "The package version ($VERSION) and the latest tag version ($TAG) are different"
             exit 1
           fi
       - name: Install twine
