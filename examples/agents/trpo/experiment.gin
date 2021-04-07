@@ -1,0 +1,7 @@
+
+
+
+train_eval.num_environment_steps = 1000000
+train_eval.num_eval_episodes = 1
+train_eval.eval_interval = 2000
+train_eval.summary_interval = 50

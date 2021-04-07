@@ -1,0 +1,8 @@
+sphinx
+ipython
+ipykernel
+pandoc
+nbsphinx
+sphinx-rtd-theme
+jupytext
+sphinx-autodoc-typehints

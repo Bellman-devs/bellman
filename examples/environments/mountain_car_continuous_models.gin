@@ -1,0 +1,6 @@
+
+import examples.utils.classic_control
+
+
+train_eval.reward_model_class = @MountainCarReward
+train_eval.initial_state_distribution_model_class = @MountainCarInitialState
