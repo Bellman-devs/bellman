@@ -10,7 +10,8 @@
 
 
 [Website](https://bellman.dev) |
-[Documentation (latest)](https://bellman.dev/docs/latest) |
+[Twitter](https://twitter.com/BellmanDevs) |
+[Documentation (latest)](https://bellman.dev/docs/latest)
 
 
 ## What does Bellman do?
@@ -41,7 +42,7 @@ and [Peter Vrancx](https://github.com/pvrancx).
 
 Bellman is an open source project. If you have relevant skills and are interested in contributing then please do contact us (see ["The Bellman Community" section](#the-bellman-community) below).
 
-we are very grateful to our Secondmind Labs colleagues, maintainers of [GPflow](https://github.com/GPflow/GPflow) and [Trieste](https://github.com/secondmind-labs/trieste), for their help with creating contributing guidelines, instructions for users and open-sourcing in general.
+We are very grateful to our Secondmind Labs colleagues, maintainers of [GPflow](https://github.com/GPflow/GPflow) and [Trieste](https://github.com/secondmind-labs/trieste) in particular, for their help with creating contributing guidelines, instructions for users and open-sourcing in general.
 
 
 ## Install Bellman
@@ -53,7 +54,7 @@ For latest (stable) release from [PyPI](https://pypi.org/) you can use `pip` to 
 $ pip install bellman
 ```
 
-Use `pip` again to install the toolbox from latest source from GitHub. Check-out the `develop` branch of the [Bellman GitHub repository](https://github.com/Bellman-devs/bellman), and in the repository root run
+Use `pip` to install the toolbox from latest source from GitHub. Check-out the `develop` branch of the [Bellman GitHub repository](https://github.com/Bellman-devs/bellman), and in the repository root run
 ```bash
 $ pip install -e .
 ```
