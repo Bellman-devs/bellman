@@ -23,7 +23,8 @@ copyright = "2021, The Bellman Contributors"
 author = "The Bellman Contributors"
 
 # The full version, including alpha/beta/rc tags
-release = "0.1.0"
+with open(os.path.join("..", "VERSION"), "r") as file:
+    release = file.read()
 
 # -- General configuration ---------------------------------------------------
 
