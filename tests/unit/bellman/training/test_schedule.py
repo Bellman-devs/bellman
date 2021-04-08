@@ -156,7 +156,9 @@ def test_training_info_does_not_contain_none_losses():
     def _none_returning_train_step():
         return LossInfo(loss=None, extra=None)
 
-    schedule = {SingleComponentAgent.COMPONENT: TrainingDefinition(1, _none_returning_train_step)}
+    schedule = {
+        SingleComponentAgent.COMPONENT: TrainingDefinition(1, _none_returning_train_step)
+    }
     training_scheduler = TFTrainingScheduler(schedule)
 
     loss_dictionary = training_scheduler.maybe_train(tf.ones(tuple(), dtype=tf.int64))
