@@ -13,8 +13,7 @@
 # limitations under the License.
 
 on:
-  # Trigger the workflow on push or pull request,
-  # but only for the develop branch
+  workflow_dispatch:
   push:
     branches:
       - develop
