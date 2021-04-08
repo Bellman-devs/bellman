@@ -118,6 +118,7 @@ class TFTrainingScheduler:
             if step_counter >= training_definition.interval:
                 step_counter.assign(0)
                 loss_info = training_definition.train_step()
-                training_info[component] = loss_info
+                if loss_info.loss is not None:
+                    training_info[component] = loss_info
 
         return training_info
