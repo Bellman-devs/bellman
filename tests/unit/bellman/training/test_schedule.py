@@ -13,6 +13,7 @@
 # limitations under the License.
 
 import tensorflow as tf
+from tf_agents.agents.tf_agent import LossInfo
 
 from bellman.training.schedule import TFTrainingScheduler, TrainingDefinition
 from tests.tools.bellman.training.schedule import (
@@ -149,3 +150,14 @@ def test_training_scheduler_resets_one_step_counter_of_several():
         loss_dictionary_3[MultiComponentAgent.COMPONENT_3].extra
         == MultiComponentAgent.COMPONENT_3.name
     )
+
+
+def test_training_info_does_not_contain_none_losses():
+    def _none_returning_train_step():
+        return LossInfo(loss=None, extra=None)
+
+    schedule = {SingleComponentAgent.COMPONENT: TrainingDefinition(1, _none_returning_train_step)}
+    training_scheduler = TFTrainingScheduler(schedule)
+
+    loss_dictionary = training_scheduler.maybe_train(tf.ones(tuple(), dtype=tf.int64))
+    assert not loss_dictionary  # loss_dictionary should be empty
