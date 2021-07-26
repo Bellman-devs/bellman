@@ -20,7 +20,7 @@ Bellman is a package for model-based reinforcement learning (MBRL) in Python, us
 
 Bellman provides a framework for flexible composition of model-based reinforcement learning algorithms. It offers two major classes of algorithms: decision time planning and background planning algorithms. With each class any kind of supervised learning method can be easily used to learn certain component of the environment. Bellman was designed with modularity in mind - important components can be flexibly combined, such as type of decision time planning method (e.g. a cross entropy method or a random shooting method) and type of model for state transition (e.g. a probabilistic neural network or an ensemble of neural networks). Bellman also provides implementation of several popular state-of-the-art MBRL algorithms, such as PETS, MBPO and METRPO. The [online documentation (latest)](https://bellman.dev/docs/latest/) contains more details. 
 
-Bellman requires Python 3.7 onwards and uses [TensorFlow 2.4+](http://www.tensorflow.org) for running computations, which allows fast execution on GPUs.
+Bellman requires Python 3.7 onwards and uses [TensorFlow 2.5.0](http://www.tensorflow.org) for running computations, which allows fast execution on GPUs.
 
 
 ### Maintainers
