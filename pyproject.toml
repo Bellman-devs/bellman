@@ -28,9 +28,9 @@ classifiers = [
 [tool.poetry.dependencies]
 python = "^3.7"
 gym = "0.17.2"
-tensorflow = "2.4.0"
-tensorflow-probability = "0.12.1"
-tf-agents = "0.7.1"
+tensorflow = "2.5.0"
+tensorflow-probability = "0.12.2"
+tf-agents = "0.8.0"
 matplotlib = "3.2.1"
 imageio = "2.8.0"
 imageio-ffmpeg = "0.4.2"

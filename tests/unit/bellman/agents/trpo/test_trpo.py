@@ -135,7 +135,7 @@ def test_policy_gradient_loss(create_trpo_agent):
         current_policy_distribution,
         weights,
     ).numpy()
-    np.testing.assert_allclose(loss, expected_loss)
+    np.testing.assert_allclose(loss, expected_loss, rtol=1e-06)
 
 
 def test_policy_gradient(create_trpo_agent):
@@ -164,7 +164,7 @@ def test_policy_gradient(create_trpo_agent):
     ]
     loss, grads = trpo_agent.policy_gradient(time_steps, policy_steps, advantages, weights)
 
-    np.testing.assert_allclose(loss, expected_loss)
+    np.testing.assert_allclose(loss, expected_loss, rtol=1e-06)
     for g, g_ref in zip(grads, expected_grads):
         np.testing.assert_array_almost_equal(g, g_ref)
 

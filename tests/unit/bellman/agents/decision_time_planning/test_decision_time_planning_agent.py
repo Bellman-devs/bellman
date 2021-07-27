@@ -58,9 +58,7 @@ def test_train_method_increments_counter():
     reward_model = ConstantReward(OBSERVATION_SPEC, ACTION_SPEC)
     initial_state_model = create_uniform_initial_state_distribution(OBSERVATION_SPEC)
 
-    train_step_counter = common.create_variable(
-        "train_step_counter", shape=(), dtype=tf.float64
-    )
+    train_step_counter = common.create_variable("train_step_counter", shape=())
     agent = DecisionTimePlanningAgent(
         TIMESTEP_SPEC,
         ACTION_SPEC,
@@ -105,9 +103,7 @@ def test_train_method_increments_counter_for_model_free_supported_agents(
     reward_model = ConstantReward(OBSERVATION_SPEC, ACTION_SPEC)
     initial_state_model = create_uniform_initial_state_distribution(OBSERVATION_SPEC)
 
-    train_step_counter = common.create_variable(
-        "train_step_counter", shape=(), dtype=tf.float64
-    )
+    train_step_counter = common.create_variable("train_step_counter", shape=())
     agent = ModelFreeSupportedDecisionTimePlanningAgent(
         TIMESTEP_SPEC,
         ACTION_SPEC,
@@ -144,9 +140,7 @@ def test_train_oracle_transition_model():
     reward_model = ConstantReward(OBSERVATION_SPEC, ACTION_SPEC)
     initial_state_model = create_uniform_initial_state_distribution(OBSERVATION_SPEC)
 
-    train_step_counter = common.create_variable(
-        "train_step_counter", shape=(), dtype=tf.float64
-    )
+    train_step_counter = common.create_variable("train_step_counter", shape=())
     with pytest.warns(RuntimeWarning):
         agent = DecisionTimePlanningAgent(
             TIMESTEP_SPEC,

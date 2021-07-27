@@ -12,9 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import numpy as np
 import tensorflow as tf
-import tensorflow.keras.layers as layers
 
 from bellman.environments.transition_model.keras_model.network import KerasTransitionNetwork
 from bellman.environments.transition_model.utils import size
@@ -36,8 +34,8 @@ class DummyEnsembleTransitionNetwork(KerasTransitionNetwork):
     def build_model(self, inputs: tf.keras.layers.Layer) -> tf.keras.layers.Layer:
         outputs_size = size(self._observation_space_spec)
 
-        x = layers.Dense(64, activation="relu", dtype=tf.float32)(inputs)
-        outputs = layers.Dense(outputs_size, activation=None, dtype=tf.float32)(x)
+        x = tf.keras.layers.Dense(64, activation="relu", dtype=tf.float32)(inputs)
+        outputs = tf.keras.layers.Dense(outputs_size, activation=None, dtype=tf.float32)(x)
         return tf.keras.layers.Reshape(self._observation_space_spec.shape)(outputs)
 
     def loss(self) -> tf.keras.losses.Loss:

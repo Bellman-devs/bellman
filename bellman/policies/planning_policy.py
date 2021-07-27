@@ -130,9 +130,9 @@ class PlanningPolicy(tf_policy.TFPolicy):
                 create_uniform_distribution_from_spec(self.action_spec).sample(),
                 1 + self.action_spec.shape,
             ),
-            lambda: self.trajectory_optimiser.optimise(time_step, self._environment_model)[
-                None, 0
-            ],
+            lambda: tf.expand_dims(
+                self.trajectory_optimiser.optimise(time_step, self._environment_model)[0], 0
+            ),
         )
 
         def _to_distribution(action_or_distribution):

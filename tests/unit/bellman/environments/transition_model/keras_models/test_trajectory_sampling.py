@@ -51,7 +51,7 @@ def test_batch_partition_is_reversible_within_tf_function(
     trajectory_sampling_strategy_factory, batch_size, ensemble_size
 ):
     strategy = trajectory_sampling_strategy_factory(batch_size, ensemble_size)
-    starting_tensor = tf.range(batch_size)
+    starting_tensor = tf.range(batch_size, dtype=tf.float32)
 
     @tf.function
     def inner_function():

@@ -107,20 +107,15 @@ class ModelBasedAgent(tf_agent.TFAgent):
         if not self._trainable_components:
             warn("No trainable model specified!", RuntimeWarning)
 
-        # additional input for the _train method
-        train_argspec = {TRAIN_ARGSPEC_COMPONENT_ID: TensorSpec(shape=(), dtype=tf.string)}
-
         super().__init__(
             time_step_spec,
             action_spec,
             policy,
             collect_policy,
             train_sequence_length=None,
-            train_argspec=train_argspec,
             debug_summaries=debug_summaries,
             summarize_grads_and_vars=False,
             train_step_counter=train_step_counter,
-            validate_args=True,
         )
 
     @property
