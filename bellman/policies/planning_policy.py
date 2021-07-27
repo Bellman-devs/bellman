@@ -132,7 +132,7 @@ class PlanningPolicy(tf_policy.TFPolicy):
             ),
             lambda: tf.expand_dims(
                 self.trajectory_optimiser.optimise(time_step, self._environment_model)[0], 0
-            )
+            ),
         )
 
         def _to_distribution(action_or_distribution):

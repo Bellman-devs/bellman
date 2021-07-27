@@ -56,9 +56,7 @@ def test_train_method_increments_counter_for_generic_background_planning(mocker,
     reward_model = ConstantReward(OBSERVATION_SPEC, ACTION_SPEC)
     initial_state_model = create_uniform_initial_state_distribution(OBSERVATION_SPEC)
 
-    train_step_counter = common.create_variable(
-        "train_step_counter", shape=()
-    )
+    train_step_counter = common.create_variable("train_step_counter", shape=())
     model_based_agent = BackgroundPlanningAgent(
         (transition_model, TransitionModelTrainingSpec(1, 1)),
         reward_model,
@@ -101,9 +99,7 @@ def test_train_method_increments_counter_for_on_policy_background_planning(
     reward_model = ConstantReward(OBSERVATION_SPEC, ACTION_SPEC)
     initial_state_model = create_uniform_initial_state_distribution(OBSERVATION_SPEC)
 
-    train_step_counter = common.create_variable(
-        "train_step_counter", shape=()
-    )
+    train_step_counter = common.create_variable("train_step_counter", shape=())
     model_based_agent = OnPolicyBackgroundPlanningAgent(
         (transition_model, TransitionModelTrainingSpec(1, 1)),
         reward_model,
@@ -147,9 +143,7 @@ def test_train_method_increments_counter_for_off_policy_background_planning(
     reward_model = ConstantReward(OBSERVATION_SPEC, ACTION_SPEC)
     initial_state_model = create_uniform_initial_state_distribution(OBSERVATION_SPEC)
 
-    train_step_counter = common.create_variable(
-        "train_step_counter", shape=()
-    )
+    train_step_counter = common.create_variable("train_step_counter", shape=())
     model_based_agent = OffPolicyBackgroundPlanningAgent(
         (transition_model, TransitionModelTrainingSpec(1, 1)),
         reward_model,

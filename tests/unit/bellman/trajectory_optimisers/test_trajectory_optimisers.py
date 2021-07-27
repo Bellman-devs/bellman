@@ -42,7 +42,6 @@ from tests.tools.bellman.environments.reward_model import ConstantReward
 from tests.tools.bellman.environments.transition_model.transition_model import (
     StubTrainableTransitionModel,
 )
-from tests.tools.bellman.samplers.samplers import get_optimiser_and_environment_model
 from tests.tools.bellman.trajectory_optimisers.environment_model_components import (
     OBSERVATION_SPACE_SPEC,
     TrajectoryOptimiserTerminationModel,
@@ -195,7 +194,7 @@ def test_trajectory_optimiser_each_iteration_starts_with_the_initial_observation
             self,
             time_step: ts.TimeStep,
             policy_state: types.NestedTensor,
-            seed: Optional[types.Seed],
+            seed: Optional[types.Seed] = None,
         ) -> policy_step.PolicyStep:
             np.testing.assert_array_equal(
                 time_step.observation, self._environment_model.current_time_step().observation
@@ -242,7 +241,6 @@ def test_trajectory_optimiser_each_iteration_starts_with_the_initial_observation
 
 
 def test_tf_env_wrapper_is_reset_at_the_start_of_each_iteration(action_space):
-
     observations_array = [
         # First iteration
         [StepType.FIRST, StepType.FIRST],

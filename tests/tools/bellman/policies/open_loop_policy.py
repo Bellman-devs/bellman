@@ -15,10 +15,13 @@
 """
 This module provides an open loop policy.
 """
+from typing import Optional
 
 import tensorflow as tf
 from tf_agents.policies.tf_policy import TFPolicy
 from tf_agents.trajectories import policy_step
+from tf_agents.trajectories import time_step as ts
+from tf_agents.typing import types
 from tf_agents.utils import common, nest_utils
 
 
@@ -41,7 +44,12 @@ class TFOpenLoopPolicy(TFPolicy):
             dtype=action_spec.dtype,
         )
 
-    def _action(self, time_step, policy_state, seed):
+    def _action(
+        self,
+        time_step: ts.TimeStep,
+        policy_state: types.NestedTensor,
+        seed: Optional[types.Seed] = None,
+    ) -> policy_step.PolicyStep:
         outer_shape = nest_utils.get_outer_shape(time_step, self._time_step_spec)
         action = common.replicate(self._next_action, outer_shape)
 
